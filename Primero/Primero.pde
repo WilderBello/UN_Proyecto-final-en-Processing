@@ -12,22 +12,25 @@ void draw() {
 }
 
 void setup() {
-  size(400, 400);
+  size(600, 400);
+  PFont font = createFont("arial",20);
   cp5 = new ControlP5(this);
   us = new ControlP5(this);
   sim = new ControlP5(this);
   inicio = new ControlP5(this);
   usuario = new User();
   conv = new Convocatoria();
-  inicio.addButton("buscar").setPosition(100, 280).setSize(80, 40);
-  inicio.addButton("todo").setPosition(200, 280).setSize(80, 40);
-  sim.addButton("cerrar").setPosition(340, 365).setSize(50, 25);
+  inicio.addTextlabel("label1").setText("BIENVENIDO A EMPLEANDO-UN").setPosition(135,20).setFont(font);
+  inicio.addButton("buscar").setPosition(200, 260).setSize(80, 40);
+  inicio.addButton("todo").setPosition(320, 260).setSize(80, 40);
+  sim.addButton("cerrar").setPosition(545, 370).setSize(50, 25);
   usuario.carrera(us);
   }
 
 void buscar() {
+  PFont font = createFont("arial",20);
   println("Click buscar");
-  usuario.botones(us);
+  conv.oferta(inicio,cp5,font);
 }
 void todo() {
   PFont font = createFont("arial",20);

@@ -7,8 +7,7 @@ class Convocatoria{
     inicio.hide();
     us.hide();
     Textlabel Titulo;
-    Titulo = cp5.addTextlabel("label").setText("CONVOCATORIAS").setPosition(70,20).setFont(font);
-    
-}
+    Titulo = cp5.addTextlabel("label").setText("CONVOCATORIAS").setPosition(200,20).setFont(font);
+  }
   
 }
