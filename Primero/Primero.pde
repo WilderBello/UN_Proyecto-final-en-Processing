@@ -5,7 +5,8 @@ Convocatoria conv;
 ControlP5 inicio;
 ControlP5 cp5;
 ControlP5 us;
-ControlP5 sim;
+ControlP5 clos;
+Textarea myTextarea;
 
 void draw() {
   background(180);
@@ -16,27 +17,36 @@ void setup() {
   PFont font = createFont("arial",20);
   cp5 = new ControlP5(this);
   us = new ControlP5(this);
-  sim = new ControlP5(this);
+  clos = new ControlP5(this);
   inicio = new ControlP5(this);
   usuario = new User();
   conv = new Convocatoria();
   inicio.addTextlabel("label1").setText("BIENVENIDO A EMPLEANDO-UN").setPosition(135,20).setFont(font);
-  inicio.addButton("buscar").setPosition(200, 260).setSize(80, 40);
-  inicio.addButton("todo").setPosition(320, 260).setSize(80, 40);
-  sim.addButton("cerrar").setPosition(545, 370).setSize(50, 25);
+  clos.addButton("cerrar").setPosition(545, 370).setSize(50, 25);
+  usuario.botones(us);
   usuario.carrera(us);
+  usuario.tipe(us);
+  usuario.tex(myTextarea,us);
   }
 
 void buscar() {
   PFont font = createFont("arial",20);
-  println("Click buscar");
+  println("*Click buscar*");
   conv.oferta(inicio,cp5,font);
 }
 void todo() {
   PFont font = createFont("arial",20);
-  println("Click todo");
+  println("*Click todo*");
   conv.oferta(inicio,cp5,font);
+  conv.cargar();
 }
 void cerrar() {
   exit();
+}
+
+void seleccionar(int n) {
+  println(us.get(ScrollableList.class, "seleccionar").getItem(n).put("name","a"));
+}
+void tipo(int n){
+  println(us.get(ScrollableList.class, "tipo").getItem(n).put("name","a"));
 }
