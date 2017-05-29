@@ -1,19 +1,24 @@
 import controlP5.*;
 User usuario;
 Convocatoria conv;
-
 ControlP5 inicio;
 ControlP5 cp5;
 ControlP5 us;
 ControlP5 clos;
 Textarea myTextarea;
+PImage un;
+int x =0;
+int y =75;
 
 void draw() {
   background(180);
+  image(un,x,y);
 }
 
 void setup() {
-  size(600, 400);
+  size(500, 380);
+  un = new PImage();
+  un = loadImage("C:/Users/ASUS/Desktop/POO/un.png");
   PFont font = createFont("arial",20);
   cp5 = new ControlP5(this);
   us = new ControlP5(this);
@@ -21,8 +26,8 @@ void setup() {
   inicio = new ControlP5(this);
   usuario = new User();
   conv = new Convocatoria();
-  inicio.addTextlabel("label1").setText("BIENVENIDO A EMPLEANDO-UN").setPosition(135,20).setFont(font);
-  clos.addButton("cerrar").setPosition(545, 370).setSize(50, 25);
+  inicio.addTextlabel("label1").setText("BIENVENIDO A EMPLEANDO-UN").setPosition(85,20).setFont(font);
+  clos.addButton("cerrar").setPosition(445, 350).setSize(50, 25);
   usuario.botones(us);
   usuario.carrera(us);
   usuario.tipe(us);
