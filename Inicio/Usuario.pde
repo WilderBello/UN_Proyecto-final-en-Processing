@@ -25,7 +25,7 @@ class User {
   }
 
   void botones(ControlP5 us) {
-    us.addButton("buscar").setPosition(245, 190).setSize(80, 40);
+    us.addButton("filtrar").setPosition(245, 190).setSize(80, 40);
     us.addButton("todo").setPosition(365, 190).setSize(80, 40);
   }
   
@@ -39,8 +39,8 @@ class User {
                   .setColorBackground(color(25,100));
                   
   myTextarea.setText("TIPO: "
-                    +" A = dvsdv, B = dvdfb, E = cfsdfsd, I = sfsdvs,"
-                    +" O = sddbfbfb, GA = scsdvcsdv"
+                    +"I = Proyecto de Investigación, E = Proyecto de Extensión, A = Apoyo Académico,"
+                    +"  GA = Gestión Administrativa, B = Bienestar, O = Otro"
                     );
   }
 }

@@ -10,7 +10,7 @@ class Convocatoria{
   }
   
   void cargar(){
-    String[] lines = loadStrings("C:/Users/ASUS/Desktop/POO/POO_CONV.csv");
+    String[] lines = loadStrings("C:/Users/ASUS/Desktop/POO/Proyecto-final-en-Processing/POO_CONV.csv");
     printArray(lines);
   }
   

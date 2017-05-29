@@ -34,7 +34,7 @@ void setup() {
   usuario.tex(myTextarea,us);
   }
 
-void buscar() {
+void filtrar() {
   PFont font = createFont("arial",20);
   println("*Click buscar*");
   conv.oferta(inicio,cp5,font);
