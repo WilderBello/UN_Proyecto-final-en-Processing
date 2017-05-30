@@ -50,6 +50,7 @@ void cerrar() {
 }
 
 void seleccionar(int n) {
+  //imprime el item seleccionado
   println(us.get(ScrollableList.class, "seleccionar").getItem(n).put("name","a"));
 }
 void tipo(int n){

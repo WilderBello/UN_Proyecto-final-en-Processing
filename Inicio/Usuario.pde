@@ -30,6 +30,7 @@ class User {
   }
   
   void tex(Textarea myTextarea, ControlP5 us ){
+    //Descripcion de los tipos de convocatoria
     myTextarea = us.addTextarea("txt")
                   .setPosition(225,250)
                   .setSize(210,95)

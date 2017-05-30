@@ -10,6 +10,7 @@ class Convocatoria{
   }
   
   void cargar(){
+    //Imprime la tabla de convocatorias en consola
     String[] lines = loadStrings("C:/Users/ASUS/Desktop/POO/Proyecto-final-en-Processing/POO_CONV.csv");
     printArray(lines);
   }
