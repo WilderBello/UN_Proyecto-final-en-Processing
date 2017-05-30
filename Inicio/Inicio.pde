@@ -18,7 +18,7 @@ void draw() {
 void setup() {
   size(500, 380);
   un = new PImage();
-  un = loadImage("C:/Users/ASUS/Desktop/POO/un.png");
+  un = loadImage("C:/Users/ASUS/Desktop/POO/Proyecto-final-en-Processing/un.png");
   PFont font = createFont("arial",20);
   cp5 = new ControlP5(this);
   us = new ControlP5(this);
